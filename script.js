@@ -82,6 +82,59 @@ document.addEventListener('DOMContentLoaded', () => {
         loadItems(e.target.value);
     });
 
+    // Wait for the DOM to load
+document.addEventListener('DOMContentLoaded', () => {
+    const searchButton = document.getElementById('searchButton');
+    const resultsList = document.getElementById('results');
+  
+    searchButton.addEventListener('click', () => {
+      // Get the search query from the input field
+      const searchQuery = document.getElementById('searchQuery').value;
+  
+      if (!searchQuery.trim()) {
+        alert("Please enter a search query!");
+        return;
+      }
+  
+      // Open Library API URL
+      const apiUrl = `https://openlibrary.org/search.json?q=${encodeURIComponent(searchQuery)}`;
+  
+      // Fetch the data
+      fetch(apiUrl)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+          }
+          return response.json();
+        })
+        .then(data => {
+          // Clear any previous results
+          resultsList.innerHTML = "";
+  
+          // Display results
+          data.docs.forEach(book => {
+            const listItem = document.createElement('li');
+            listItem.textContent = `Title: ${book.title}, Author: ${book.author_name ? book.author_name.join(', ') : 'Unknown'}`;
+            resultsList.appendChild(listItem);
+          });
+        })
+        .catch(error => {
+          console.error("Error fetching data:", error);
+          alert("Failed to fetch search results. Please try again.");
+        });
+    });
+  });
+  document.getElementById('add-item-btn').addEventListener('click', () => {
+    const itemName = prompt('Enter item name:');
+    const itemType = prompt('Enter item type (e.g., Stationery, Book):');
+    if (itemName && itemType) {
+        const newItem = { item: itemName, type: itemType, comment: '' };
+        itemsData[`primary${primaryLevelSelect.value}`].stationery.push(newItem);
+        loadItems(primaryLevelSelect.value);
+    }
+});
+
+
     // Initial data load
     loadData();
 });
