@@ -1,0 +1,224 @@
+ {
+    "primary1": {
+        "books": [
+            {"title": "STELLAR MATERIALS", "subject": "English Language", "comment": "Provided by school"},
+            {"title": "Primary Mathematics Textbook 1A", "subject": "Mathematics"},
+            {"title": "Primary Mathematics Textbook 1B", "subject": "Mathematics"},
+            {"title": "Primary Mathematics Practice Book 1A", "subject": "Mathematics"},
+            {"title": "Primary Mathematics Practice Book 1B", "subject": "Mathematics"},
+            {"title": "Social Studies Primary 1 Activity Book", "subject": "Social Studies"},
+            {"title": "My Physical Education Journal P1", "subject": "Physical and Health Education"},
+            {"title": "iGROW - Learning to Shine", "subject": "FTGP"},
+            {"title": "Chinese Language For Pri Schools (欢乐伙伴2.0) Textbook P1A", "subject": "Chinese Language"},
+            {"title": "Chinese Language For Pri Schools (欢乐伙伴2.0) Textbook P1B", "subject": "Chinese Language"},
+            {"title": "Chinese Language For Pri Schools (欢乐伙伴2.0) Activity Book P1A", "subject": "Chinese Language"},
+            {"title": "Chinese Language For Pri Schools (欢乐伙伴2.0) Activity Book P1B", "subject": "Chinese Language"},
+            {"title": "Chinese Language For Pri Schools (欢乐伙伴2.0) Writing Exercise Book P1A", "subject": "Chinese Language"},
+            {"title": "Chinese Language For Pri Schools (欢乐伙伴2.0) Writing Exercise Book P1B", "subject": "Chinese Language"},
+            {"title": "Character and Citizenship Education (Form Teacher Guidance Period) P1", "subject": "Character and Citizenship Education"}
+        ],
+        "stationery": [
+            {"item": "WGPS Jotter Book with Lines (FSC)", "subject": "English Language"},
+            {"item": "WGPS Five-in-one Fastener File - Red", "subject": "English Language"},
+            {"item": "WGPS Jotter Book with Lines (FSC)", "subject": "Mathematics"},
+            {"item": "WGPS Five-in-one Fastener File - Blue", "subject": "Mathematics"},
+            {"item": "A4 Plastic Whiteboard Set", "subject": "Mathematics"},
+            {"item": "WGPS Big Square Exercise Book (FSC)", "subject": "Chinese Language"},
+            {"item": "WGPS Five-in-one Fastener File - Yellow", "subject": "Chinese Language"},
+            {"item": "WGPS Broad Lines Exercise Book (FSC)", "subject": "Malay Language"},
+            {"item": "WGPS Five-in-one Fastener File - Yellow", "subject": "Malay Language"},
+            {"item": "WGPS Broad Lines Exercise Book (FSC)", "subject": "Tamil Language"},
+            {"item": "WGPS Five-in-one Fastener File - Yellow", "subject": "Tamil Language"}
+        ],
+        "optionalItems": [
+            {"item": "A4 Sketch Book", "comment": "Art"},
+            {"item": "ESPP Drawing Block 15 Inch x11 Inch, 135gsm", "comment": "Art"},
+            {"item": "OMNI Intense Water Colour Pencil, 12 Color (Long)", "comment": "Art"},
+            {"item": "Sakura Craypas Oil Painting Effect Oil Pastel, 16 Color (Small)", "comment": "Art"},
+            {"item": "Zebra Name Pen - Black", "comment": "Art"},
+            {"item": "A3 Plastic Two Button Folder", "comment": "Art"},
+            {"item": "My Fun Buddy 欢乐伙伴 好帮手", "comment": "Chinese supplementary materials"},
+            {"item": "Pin Le - Hanyu Pinyin Game Cards", "comment": "Chinese supplementary materials"},
+            {"item": "A3 Art Bag", "comment": "Art storage"},
+            {"item": "Textbook & Workbook Cover Set for Primary 1/2", "comment": "Book protection"},
+            {"item": "PVC A5 Exercise Book Cover (10pcs)", "comment": "Book protection"},
+            {"item": "PVC Book Wrapper Roll 13.5 Inch x 10M", "comment": "Book protection"},
+            {"item": "Chinese Flash / Character Card Holder", "comment": "Chinese language use"},
+            {"item": "Wipe Down Cloth", "comment": "General use"},
+            {"item": "Thermometer", "comment": "Health checks"},
+            {"item": "Bostik Glue Stick 8g", "comment": "Crafts"}
+        ]
+    },
+    "primary2": {
+        "books": [
+            {"title": "Primary Mathematics Textbook 2A", "subject": "Mathematics", "comment": "Intermediate level"},
+            {"title": "Social Studies Primary 2", "subject": "Social Studies", "comment": "Understanding community"}
+        ],
+        "stationery": [
+            {"item": "Broad Lines Exercise Book", "comment": "Writing practice"},
+            {"item": "Color Pencils Set", "comment": "Art projects"}
+        ]
+    },
+    "primary3": {
+        "books": [
+            {"title": "Primary Mathematics Textbook 3A", "subject": "Mathematics", "comment": "Advance concepts"},
+            {"title": "Science Workbook", "subject": "Science", "comment": "Experiment-based"}
+        ],
+        "stationery": [
+            {"item": "Graph Paper Notebook", "comment": "Mathematics practice"},
+            {"item": "Geometry Set", "comment": "Includes compass, protractor"}
+        ]
+    },
+    "primary4": {
+        "books": [
+            {"title": "Primary Mathematics Textbook 4A", "subject": "Mathematics", "comment": "Problem-solving focus"},
+            {"title": "Science Workbook", "subject": "Science", "comment": "Intermediate level"}
+        ],
+        "stationery": [
+            {"item": "Ring Binder File", "comment": "Keep notes organized"},
+            {"item": "Highlighter Set", "comment": "Highlight important points"}
+        ]
+    },
+    "primary5": {
+    "books": [
+      {"title": "Primary 5 (EL) STELLAR 2.0 Readers: Units 1 to 9 Bundle", "subject": "English Language", "comment": "Distributed by teacher when school reopens"},
+      {"title": "P5 Listening Oral and Comprehension Standard (Revised Edition)", "subject": "English Language", "comment": "Enhances listening and comprehension skills"},
+      {"title": "Primary Mathematics Textbook 5A", "subject": "Mathematics", "comment": "Preparation for PSLE"},
+      {"title": "Primary Mathematics Textbook 5B", "subject": "Mathematics", "comment": "Preparation for PSLE"},
+      {"title": "Primary Mathematics Practice Book 5A", "subject": "Mathematics", "comment": "Practice questions for mastery"},
+      {"title": "Primary Mathematics Practice Book 5B", "subject": "Mathematics", "comment": "Practice questions for mastery"},
+      {"title": "Inspiring Science P5 Textbook (Standard)", "subject": "Science", "comment": "Higher-level concepts"},
+      {"title": "Inspiring Science P5 Activity Book (Standard)", "subject": "Science", "comment": "Hands-on learning activities"},
+      {"title": "Social Studies Textbook 5A", "subject": "Social Studies", "comment": "Focuses on national values"},
+      {"title": "Social Studies Textbook 5B", "subject": "Social Studies", "comment": "Covers cultural and historical aspects"},
+      {"title": "Social Studies Activity Book 5A", "subject": "Social Studies", "comment": "Interactive activities for engagement"},
+      {"title": "Social Studies Activity Book 5B", "subject": "Social Studies", "comment": "Interactive activities for engagement"},
+      {"title": "My Physical Education Journal P5", "subject": "Physical and Health Education", "comment": "Tracks physical fitness progress"},
+      {"title": "iGROW - Thriving to Shine", "subject": "FTGP", "comment": "Complimentary by school"},
+      {"title": "Higher Chinese For Pri Schools (欢乐伙伴) Textbook 5A", "subject": "Higher Chinese Language", "comment": "Advanced Chinese language learning"},
+      {"title": "Higher Chinese For Pri Schools (欢乐伙伴) Textbook 5B", "subject": "Higher Chinese Language", "comment": "Advanced Chinese language learning"},
+      {"title": "Higher Chinese For Pri Schools (欢乐伙伴) Activity Book 5A", "subject": "Higher Chinese Language", "comment": "Exercises to reinforce learning"},
+      {"title": "Higher Chinese For Pri Schools (欢乐伙伴) Activity Book 5B", "subject": "Higher Chinese Language", "comment": "Exercises to reinforce learning"}
+    ],
+    "stationery": [
+      {"item": "WGPS A4 Single Line Exercise Book (FSC)", "comment": "For note-taking in English"},
+      {"item": "WGPS Five-in-one Fastener File - Red", "comment": "Organizing English materials"},
+      {"item": "WGPS Single Line Exercise Book (FSC)", "comment": "For Mathematics notes"},
+      {"item": "Oxford Mathematics Set", "comment": "Tools for geometry practice"},
+      {"item": "WGPS Five-in-one Fastener File - Blue", "comment": "For Mathematics materials"},
+      {"item": "WGPS A4 Nature Study", "comment": "Recording science observations"},
+      {"item": "WGPS Five-in-one Fastener File - Green", "comment": "Organizing Science materials"},
+      {"item": "WGPS Medium Square Exercise Book (FSC)", "comment": "For Chinese language practice"},
+      {"item": "WGPS Chinese Composition Pad", "comment": "For essay writing in Chinese"},
+      {"item": "WGPS Five-in-one Fastener File - Yellow", "comment": "For language materials"},
+      {"item": "A4 Sketch Book", "comment": "Used for Art class"},
+      {"item": "OMNI Water Color Cake, 12 Colours and Water Brush", "comment": "Painting activities for Art class"},
+      {"item": "Zebra Name Pen - Black", "comment": "Labeling and writing tasks"}
+    ]
+    },
+    "primary6": {
+    "books": [
+      {
+        "title": "Primary P6 (EL) STELLAR 2.0 Readers: Units 1 to 7 Bundle",
+        "subject": "English Language",
+        "comment": "Distributed by teacher when school reopens"
+      },
+      {
+        "title": "P6 Listening Oral and Comprehension Standard (Revised Edition)",
+        "subject": "English Language",
+        "comment": "Preparation for PSLE"
+      },
+      {
+        "title": "PSLE English Exam Papers (2022-2024)",
+        "subject": "English Language",
+        "comment": "Exam practice material"
+      },
+      {
+        "title": "Targeting Mathematics Textbook 6A",
+        "subject": "Mathematics",
+        "comment": "Preparation for PSLE"
+      },
+      {
+        "title": "Targeting Mathematics Textbook 6B",
+        "subject": "Mathematics",
+        "comment": "Preparation for PSLE"
+      },
+      {
+        "title": "Targeting Mathematics Workbook 6A",
+        "subject": "Mathematics",
+        "comment": "Workbook for practice"
+      },
+      {
+        "title": "Targeting Mathematics Workbook 6B",
+        "subject": "Mathematics",
+        "comment": "Workbook for practice"
+      },
+      {
+        "title": "PSLE Maths (Topical) Exam Papers (2022-2024)",
+        "subject": "Mathematics",
+        "comment": "Exam practice material"
+      },
+      {
+        "title": "My Pals Are Here! Science P5&6 Textbook-Energy (3Ed)",
+        "subject": "Science",
+        "comment": "Core science concepts"
+      },
+      {
+        "title": "My Pals Are Here! Science P5&6 Workbook - Energy (3Ed)",
+        "subject": "Science",
+        "comment": "Workbook for practice"
+      },
+      {
+        "title": "PSLE Science (Topical) Exam Papers (2022-2024)",
+        "subject": "Science",
+        "comment": "Exam preparation"
+      },
+      {
+        "title": "Social Studies Textbook 6A",
+        "subject": "Social Studies",
+        "comment": "Understanding societal issues"
+      },
+      {
+        "title": "Social Studies Activity Book 6A",
+        "subject": "Social Studies",
+        "comment": "Activity workbook"
+      },
+      {
+        "title": "Higher Chinese Language (欢乐伙伴) Textbook 6A",
+        "subject": "Higher Chinese",
+        "comment": "Language proficiency for selected students"
+      }
+    ],
+    "stationery": [
+      {
+        "item": "WGPS A4 Single Lines Exercise Book",
+        "comment": "For English assignments"
+      },
+      {
+        "item": "WGPS Five-in-one Fastener File - Red",
+        "comment": "For organizing English documents"
+      },
+      {
+        "item": "Oxford Mathematics Set",
+        "comment": "Mathematical tools for Geometry"
+      },
+      {
+        "item": "WGPS A4 Exam Paper",
+        "comment": "Mock exams and practices"
+      },
+      {
+        "item": "A4 Sketch Book",
+        "comment": "For art class"
+      },
+      {
+        "item": "OMNI Intense Water Colour Pencil, 12 Color",
+        "comment": "Art supplies"
+      },
+      {
+        "item": "Zebra Name Pen - Black",
+        "comment": "Writing and labeling"
+      }
+    ]
+    }
+}
+
