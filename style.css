@@ -33,3 +33,8 @@ input, select {
 .strikethrough {
     text-decoration: line-through;
 }
+
+/* Row background color highlight */
+.highlight {
+    background-color: #0a02e1; /* Adjust to your preferred color */
+}

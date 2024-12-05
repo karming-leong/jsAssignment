@@ -1,7 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
     const itemList = document.getElementById('item-list');
     const primaryLevelSelect = document.getElementById('primary-level');
-    let itemsData = {};
+    const randomBookDetails = document.getElementById('book-details');
+    const addRandomBookBtn = document.getElementById('add-random-book-btn');
+    const searchButton = document.getElementById('searchButton');
+    const resultsList = document.getElementById('results');
+    let itemsData = {
+        primary1: { books: [], stationery: [] },
+        primary2: { books: [], stationery: [] },
+        primary3: { books: [], stationery: [] },
+        primary4: { books: [], stationery: [] },
+        primary5: { books: [], stationery: [] },
+        primary6: { books: [], stationery: [] }
+    };
 
     // Load data from data.json
     async function loadData() {
@@ -9,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const response = await fetch('data.json');
             if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
             itemsData = await response.json();
-            loadItems(primaryLevelSelect.value); // Default to Primary 1 or selected level
+            loadItems(primaryLevelSelect.value); // Default to selected primary level
         } catch (error) {
             console.error('Error loading data:', error);
         }
@@ -17,12 +28,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Load items based on selected primary level
     function loadItems(level) {
-        const levelData = itemsData[`primary${level}`];
-        let allItems = [];
-        if (levelData) {
-            allItems = [...(levelData.books || []), ...(levelData.stationery || [])];
-        }
-
+        const levelKey = `primary${level}`;
+        const levelData = itemsData[levelKey] || { books: [], stationery: [] };
+        const allItems = [...(levelData.books || []), ...(levelData.stationery || [])];
         displayItems(allItems);
     }
 
@@ -43,7 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
             itemList.appendChild(row);
 
-            // Attach event listeners for checkbox, edit, and delete
             row.querySelector('.acquired-checkbox').addEventListener('change', toggleItemAcquired);
             row.querySelector('.edit-btn').addEventListener('click', editItem);
             row.querySelector('.delete-btn').addEventListener('click', deleteItem);
@@ -51,89 +58,108 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Toggle acquired checkbox
-    function toggleItemAcquired(e) {
-        const row = e.target.closest('tr');
-        const nameCell = row.querySelector('.item-name');
-        if (e.target.checked) {
-            nameCell.classList.add('strikethrough');
-        } else {
-            nameCell.classList.remove('strikethrough');
-        }
-    }
+function toggleItemAcquired(e) {
+    const row = e.target.closest('tr');
+    const nameCell = row.querySelector('.item-name');
 
-    // Edit item comment
+    if (e.target.checked) {
+        nameCell.classList.add('strikethrough'); // Add strikethrough
+        row.style.backgroundColor = '#c8e6c9'; // Set a new background color (light green for acquired)
+    } else {
+        nameCell.classList.remove('strikethrough'); // Remove strikethrough
+        row.style.backgroundColor = ''; // Reset to the default table row color
+    }
+}
+
+
+    // Edit item details
     function editItem(e) {
         const row = e.target.closest('tr');
-        const commentCell = row.querySelector('.item-comment');
-        const newComment = prompt("Edit Comment:", commentCell.textContent);
-        if (newComment !== null) {
-            commentCell.textContent = newComment;
-        }
+        const index = e.target.dataset.index;
+        const levelKey = `primary${primaryLevelSelect.value}`;
+        const levelData = itemsData[levelKey];
+        const isBook = index < levelData.books.length;
+        const item = isBook ? levelData.books[index] : levelData.stationery[index - levelData.books.length];
+
+        const newName = prompt('Edit Item Name:', item.title || item.item);
+        const newType = prompt('Edit Item Type:', item.type || 'Stationery');
+        const newComment = prompt('Edit Comment:', item.comment || '');
+
+        if (newName !== null) item.title ? (item.title = newName) : (item.item = newName);
+        if (newType !== null) item.type = newType;
+        if (newComment !== null) item.comment = newComment;
+
+        loadItems(primaryLevelSelect.value);
     }
 
     // Delete an item
     function deleteItem(e) {
-        const row = e.target.closest('tr');
-        row.remove();
+        const index = e.target.dataset.index;
+        const levelKey = `primary${primaryLevelSelect.value}`;
+        const levelData = itemsData[levelKey];
+        const isBook = index < levelData.books.length;
+
+        if (isBook) {
+            levelData.books.splice(index, 1);
+        } else {
+            levelData.stationery.splice(index - levelData.books.length, 1);
+        }
+
+        loadItems(primaryLevelSelect.value);
     }
 
+    // Generate random children's book
+    async function generateRandomBook() {
+        try {
+            const response = await fetch('https://openlibrary.org/subjects/children.json?limit=10');
+            if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+            const data = await response.json();
+            const randomIndex = Math.floor(Math.random() * data.works.length);
+            const book = data.works[randomIndex];
+
+            randomBookDetails.textContent = `Title: ${book.title}, Author: ${book.authors[0]?.name || 'Unknown'}`;
+            addRandomBookBtn.style.display = 'block';
+            addRandomBookBtn.dataset.bookTitle = book.title;
+            addRandomBookBtn.dataset.bookAuthor = book.authors[0]?.name || 'Unknown';
+        } catch (error) {
+            console.error('Error fetching random book:', error);
+            randomBookDetails.textContent = 'Failed to fetch a random book. Please try again.';
+            addRandomBookBtn.style.display = 'none';
+        }
+    }
+
+    // Add random book to the list
+    function addRandomBookToList() {
+        const title = addRandomBookBtn.dataset.bookTitle;
+        const author = addRandomBookBtn.dataset.bookAuthor;
+        if (title && author) {
+            const newBook = { title, type: 'Book', comment: `Author: ${author}` };
+            itemsData[`primary${primaryLevelSelect.value}`].books.push(newBook);
+            loadItems(primaryLevelSelect.value);
+            randomBookDetails.textContent = '';
+            addRandomBookBtn.style.display = 'none';
+        }
+    }
+
+    // Add item manually
+    document.getElementById('add-item-btn').addEventListener('click', () => {
+        const itemName = prompt('Enter item name:');
+        const itemType = prompt('Enter item type (e.g., Stationery, Book):');
+        if (itemName && itemType) {
+            const newItem = { item: itemName, type: itemType, comment: '' };
+            itemsData[`primary${primaryLevelSelect.value}`].stationery.push(newItem);
+            loadItems(primaryLevelSelect.value);
+        }
+    });
+
     // Handle primary level selection
-    primaryLevelSelect.addEventListener('change', (e) => {
+    primaryLevelSelect.addEventListener('change', e => {
         loadItems(e.target.value);
     });
 
-    // Wait for the DOM to load
-document.addEventListener('DOMContentLoaded', () => {
-    const searchButton = document.getElementById('searchButton');
-    const resultsList = document.getElementById('results');
-  
-    searchButton.addEventListener('click', () => {
-      // Get the search query from the input field
-      const searchQuery = document.getElementById('searchQuery').value;
-  
-      if (!searchQuery.trim()) {
-        alert("Please enter a search query!");
-        return;
-      }
-  
-      // Open Library API URL
-      const apiUrl = `https://openlibrary.org/search.json?q=${encodeURIComponent(searchQuery)}`;
-  
-      // Fetch the data
-      fetch(apiUrl)
-        .then(response => {
-          if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-          }
-          return response.json();
-        })
-        .then(data => {
-          // Clear any previous results
-          resultsList.innerHTML = "";
-  
-          // Display results
-          data.docs.forEach(book => {
-            const listItem = document.createElement('li');
-            listItem.textContent = `Title: ${book.title}, Author: ${book.author_name ? book.author_name.join(', ') : 'Unknown'}`;
-            resultsList.appendChild(listItem);
-          });
-        })
-        .catch(error => {
-          console.error("Error fetching data:", error);
-          alert("Failed to fetch search results. Please try again.");
-        });
-    });
-  });
-  document.getElementById('add-item-btn').addEventListener('click', () => {
-    const itemName = prompt('Enter item name:');
-    const itemType = prompt('Enter item type (e.g., Stationery, Book):');
-    if (itemName && itemType) {
-        const newItem = { item: itemName, type: itemType, comment: '' };
-        itemsData[`primary${primaryLevelSelect.value}`].stationery.push(newItem);
-        loadItems(primaryLevelSelect.value);
-    }
-});
-
+    // Event listeners
+    document.getElementById('generate-book-btn').addEventListener('click', generateRandomBook);
+    addRandomBookBtn.addEventListener('click', addRandomBookToList);
 
     // Initial data load
     loadData();
