@@ -81,12 +81,12 @@ function toggleItemAcquired(e) {
         const isBook = index < levelData.books.length;
         const item = isBook ? levelData.books[index] : levelData.stationery[index - levelData.books.length];
 
-        const newName = prompt('Edit Item Name:', item.title || item.item);
-        const newType = prompt('Edit Item Type:', item.type || 'Stationery');
+        // const newName = prompt('Edit Item Name:', item.title || item.item);
+        // const newType = prompt('Edit Item Type:', item.type || 'Stationery');
         const newComment = prompt('Edit Comment:', item.comment || '');
 
-        if (newName !== null) item.title ? (item.title = newName) : (item.item = newName);
-        if (newType !== null) item.type = newType;
+        // if (newName !== null) item.title ? (item.title = newName) : (item.item = newName);
+        // if (newType !== null) item.type = newType;
         if (newComment !== null) item.comment = newComment;
 
         loadItems(primaryLevelSelect.value);
@@ -111,7 +111,7 @@ function toggleItemAcquired(e) {
     // Generate random children's book
     async function generateRandomBook() {
         try {
-            const response = await fetch('https://openlibrary.org/subjects/children.json?limit=10');
+            const response = await fetch('https://openlibrary.org/subjects/children.json?limit=50');
             if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
             const data = await response.json();
             const randomIndex = Math.floor(Math.random() * data.works.length);

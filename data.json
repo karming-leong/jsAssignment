@@ -1,73 +1,468 @@
  {
-    "primary1": {
-        "books": [
-            {"title": "STELLAR MATERIALS", "subject": "English Language", "comment": "Provided by school"},
-            {"title": "Primary Mathematics Textbook 1A", "subject": "Mathematics"},
-            {"title": "Primary Mathematics Textbook 1B", "subject": "Mathematics"},
-            {"title": "Primary Mathematics Practice Book 1A", "subject": "Mathematics"},
-            {"title": "Primary Mathematics Practice Book 1B", "subject": "Mathematics"},
-            {"title": "Social Studies Primary 1 Activity Book", "subject": "Social Studies"},
-            {"title": "My Physical Education Journal P1", "subject": "Physical and Health Education"},
-            {"title": "iGROW - Learning to Shine", "subject": "FTGP"},
-            {"title": "Chinese Language For Pri Schools (欢乐伙伴2.0) Textbook P1A", "subject": "Chinese Language"},
-            {"title": "Chinese Language For Pri Schools (欢乐伙伴2.0) Textbook P1B", "subject": "Chinese Language"},
-            {"title": "Chinese Language For Pri Schools (欢乐伙伴2.0) Activity Book P1A", "subject": "Chinese Language"},
-            {"title": "Chinese Language For Pri Schools (欢乐伙伴2.0) Activity Book P1B", "subject": "Chinese Language"},
-            {"title": "Chinese Language For Pri Schools (欢乐伙伴2.0) Writing Exercise Book P1A", "subject": "Chinese Language"},
-            {"title": "Chinese Language For Pri Schools (欢乐伙伴2.0) Writing Exercise Book P1B", "subject": "Chinese Language"},
-            {"title": "Character and Citizenship Education (Form Teacher Guidance Period) P1", "subject": "Character and Citizenship Education"}
-        ],
-        "stationery": [
-            {"item": "WGPS Jotter Book with Lines (FSC)", "subject": "English Language"},
-            {"item": "WGPS Five-in-one Fastener File - Red", "subject": "English Language"},
-            {"item": "WGPS Jotter Book with Lines (FSC)", "subject": "Mathematics"},
-            {"item": "WGPS Five-in-one Fastener File - Blue", "subject": "Mathematics"},
-            {"item": "A4 Plastic Whiteboard Set", "subject": "Mathematics"},
-            {"item": "WGPS Big Square Exercise Book (FSC)", "subject": "Chinese Language"},
-            {"item": "WGPS Five-in-one Fastener File - Yellow", "subject": "Chinese Language"},
-            {"item": "WGPS Broad Lines Exercise Book (FSC)", "subject": "Malay Language"},
-            {"item": "WGPS Five-in-one Fastener File - Yellow", "subject": "Malay Language"},
-            {"item": "WGPS Broad Lines Exercise Book (FSC)", "subject": "Tamil Language"},
-            {"item": "WGPS Five-in-one Fastener File - Yellow", "subject": "Tamil Language"}
-        ],
-        "optionalItems": [
-            {"item": "A4 Sketch Book", "comment": "Art"},
-            {"item": "ESPP Drawing Block 15 Inch x11 Inch, 135gsm", "comment": "Art"},
-            {"item": "OMNI Intense Water Colour Pencil, 12 Color (Long)", "comment": "Art"},
-            {"item": "Sakura Craypas Oil Painting Effect Oil Pastel, 16 Color (Small)", "comment": "Art"},
-            {"item": "Zebra Name Pen - Black", "comment": "Art"},
-            {"item": "A3 Plastic Two Button Folder", "comment": "Art"},
-            {"item": "My Fun Buddy 欢乐伙伴 好帮手", "comment": "Chinese supplementary materials"},
-            {"item": "Pin Le - Hanyu Pinyin Game Cards", "comment": "Chinese supplementary materials"},
-            {"item": "A3 Art Bag", "comment": "Art storage"},
-            {"item": "Textbook & Workbook Cover Set for Primary 1/2", "comment": "Book protection"},
-            {"item": "PVC A5 Exercise Book Cover (10pcs)", "comment": "Book protection"},
-            {"item": "PVC Book Wrapper Roll 13.5 Inch x 10M", "comment": "Book protection"},
-            {"item": "Chinese Flash / Character Card Holder", "comment": "Chinese language use"},
-            {"item": "Wipe Down Cloth", "comment": "General use"},
-            {"item": "Thermometer", "comment": "Health checks"},
-            {"item": "Bostik Glue Stick 8g", "comment": "Crafts"}
+    
+        "primary1": {
+         "books" : [ {
+            "title": "STELLAR MATERIALS",
+            "subject": "English Language",
+            "type": "book",
+            "comment": "Provided by school"
+          },
+          {
+            "title": "Primary Mathematics Textbook 1A",
+            "subject": "Mathematics",
+            "type": "book"
+          },
+          {
+            "title": "Primary Mathematics Textbook 1B",
+            "subject": "Mathematics",
+            "type": "book"
+          },
+          {
+            "title": "Primary Mathematics Practice Book 1A",
+            "subject": "Mathematics",
+            "type": "book"
+          },
+          {
+            "title": "Primary Mathematics Practice Book 1B",
+            "subject": "Mathematics",
+            "type": "book"
+          },
+          {
+            "title": "Social Studies Primary 1 Activity Book",
+            "subject": "Social Studies",
+            "type": "book"
+          },
+          {
+            "title": "My Physical Education Journal P1",
+            "subject": "Physical and Health Education",
+            "type": "book"
+          },
+          {
+            "title": "iGROW - Learning to Shine",
+            "subject": "FTGP",
+            "type": "book"
+          },
+          {
+            "title": "Chinese Language For Pri Schools (欢乐伙伴2.0) Textbook P1A",
+            "subject": "Chinese Language",
+            "type": "book"
+          },
+          {
+            "title": "Chinese Language For Pri Schools (欢乐伙伴2.0) Textbook P1B",
+            "subject": "Chinese Language",
+            "type": "book"
+          },
+          {
+            "title": "Chinese Language For Pri Schools (欢乐伙伴2.0) Activity Book P1A",
+            "subject": "Chinese Language",
+            "type": "book"
+          },
+          {
+            "title": "Chinese Language For Pri Schools (欢乐伙伴2.0) Activity Book P1B",
+            "subject": "Chinese Language",
+            "type": "book"
+          },
+          {
+            "title": "Chinese Language For Pri Schools (欢乐伙伴2.0) Writing Exercise Book P1A",
+            "subject": "Chinese Language",
+            "type": "book"
+          },
+          {
+            "title": "Chinese Language For Pri Schools (欢乐伙伴2.0) Writing Exercise Book P1B",
+            "subject": "Chinese Language",
+            "type": "book"
+          },
+          {
+            "title": "Character and Citizenship Education (Form Teacher Guidance Period) P1",
+            "subject": "Character and Citizenship Education",
+            "type": "book"
+          },
+          {
+            "title": "WGPS Jotter Book with Lines (FSC)",
+            "subject": "English Language",
+            "type": "stationery"
+          },
+          {
+            "title": "WGPS Five-in-one Fastener File - Red",
+            "subject": "English Language",
+            "type": "stationery"
+          },
+          {
+            "title": "WGPS Jotter Book with Lines (FSC)",
+            "subject": "Mathematics",
+            "type": "stationery"
+          },
+          {
+            "title": "WGPS Five-in-one Fastener File - Blue",
+            "subject": "Mathematics",
+            "type": "stationery"
+          },
+          {
+            "title": "A4 Plastic Whiteboard Set",
+            "subject": "Mathematics",
+            "type": "stationery"
+          },
+          {
+            "title": "WGPS Big Square Exercise Book (FSC)",
+            "subject": "Chinese Language",
+            "type": "stationery"
+          },
+          {
+            "title": "WGPS Five-in-one Fastener File - Yellow",
+            "subject": "Chinese Language",
+            "type": "stationery"
+          },
+          {
+            "title": "WGPS Broad Lines Exercise Book (FSC)",
+            "subject": "Malay Language",
+            "type": "stationery"
+          },
+          {
+            "title": "WGPS Five-in-one Fastener File - Yellow",
+            "subject": "Malay Language",
+            "type": "stationery"
+          },
+          {
+            "title": "WGPS Broad Lines Exercise Book (FSC)",
+            "subject": "Tamil Language",
+            "type": "stationery"
+          },
+          {
+            "title": "WGPS Five-in-one Fastener File - Yellow",
+            "subject": "Tamil Language",
+            "type": "stationery"
+          }
         ]
+      
     },
     "primary2": {
-        "books": [
-            {"title": "Primary Mathematics Textbook 2A", "subject": "Mathematics", "comment": "Intermediate level"},
-            {"title": "Social Studies Primary 2", "subject": "Social Studies", "comment": "Understanding community"}
-        ],
-        "stationery": [
-            {"item": "Broad Lines Exercise Book", "comment": "Writing practice"},
-            {"item": "Color Pencils Set", "comment": "Art projects"}
-        ]
+  "books": [
+    {
+      "title": "STELLAR MATERIALS",
+      "subject": "English Language",
+      "type": "book",
+      "comment": "Provided by school"
     },
-    "primary3": {
-        "books": [
-            {"title": "Primary Mathematics Textbook 3A", "subject": "Mathematics", "comment": "Advance concepts"},
-            {"title": "Science Workbook", "subject": "Science", "comment": "Experiment-based"}
-        ],
-        "stationery": [
-            {"item": "Graph Paper Notebook", "comment": "Mathematics practice"},
-            {"item": "Geometry Set", "comment": "Includes compass, protractor"}
-        ]
+    {
+      "title": "Primary Mathematics Textbook 2A",
+      "subject": "Mathematics",
+      "type": "book"
+    },
+    {
+      "title": "Primary Mathematics Textbook 2B (Revised)",
+      "subject": "Mathematics",
+      "type": "book"
+    },
+    {
+      "title": "Primary Mathematics Practice Book 2A",
+      "subject": "Mathematics",
+      "type": "book"
+    },
+    {
+      "title": "Primary Mathematics Practice Book 2B (Revised)",
+      "subject": "Mathematics",
+      "type": "book"
+    },
+    {
+      "title": "Social Studies Primary 2 Activity Book",
+      "subject": "Social Studies",
+      "type": "book"
+    },
+    {
+      "title": "My Physical Education Journal P2",
+      "subject": "Physical and Health Education",
+      "type": "book"
+    },
+    {
+      "title": "iGROW - Learning to Shine",
+      "subject": "FTGP",
+      "type": "book",
+      "comment": "Complimentary by school"
+    },
+    {
+      "title": "Chinese Language For Pri Schools (欢乐伙伴 2.0) Textbook 2A",
+      "subject": "Chinese Language",
+      "type": "book",
+      "comment": "NEW!"
+    },
+    {
+      "title": "Chinese Language For Pri Schools (欢乐伙伴 2.0) Textbook 2B",
+      "subject": "Chinese Language",
+      "type": "book",
+      "comment": "NEW! (Will publish in May 2025)"
+    },
+    {
+      "title": "Chinese Language For Pri Schools (欢乐伙伴 2.0) Activity Book 2A",
+      "subject": "Chinese Language",
+      "type": "book",
+      "comment": "NEW!"
+    },
+    {
+      "title": "Chinese Language For Pri Schools (欢乐伙伴 2.0) Activity Book 2B",
+      "subject": "Chinese Language",
+      "type": "book",
+      "comment": "NEW! (Will publish in May 2025)"
+    },
+    {
+      "title": "Chinese Language For Pri Schools (欢乐伙伴 2.0) Writing Exercise Book P2A",
+      "subject": "Chinese Language",
+      "type": "book",
+      "comment": "NEW!"
+    },
+    {
+      "title": "Chinese Language For Pri Schools (欢乐伙伴 2.0) Writing Exercise Book P2B",
+      "subject": "Chinese Language",
+      "type": "book",
+      "comment": "NEW! (Will publish in May 2025)"
+    },
+    {
+      "title": "Character and Citizenship Education (Form Teacher Guidance Period) P2",
+      "subject": "Character and Citizenship Education",
+      "type": "book"
+    }
+  ],
+  "stationery": [
+    {
+      "title": "WGPS Jotter Book with Lines (FSC)",
+      "subject": "English Language",
+      "type": "stationery"
+    },
+    {
+      "title": "WGPS Five-in-one Fastener File - Red",
+      "subject": "English Language",
+      "type": "stationery"
+    },
+    {
+      "title": "WGPS Jotter Book with Lines (FSC)",
+      "subject": "Mathematics",
+      "type": "stationery"
+    },
+    {
+      "title": "WGPS Five-in-one Fastener File - Blue",
+      "subject": "Mathematics",
+      "type": "stationery"
+    },
+    {
+      "title": "A4 Plastic Whiteboard Set",
+      "subject": "Mathematics",
+      "type": "stationery"
+    },
+    {
+      "title": "WGPS Medium Square Exercise Book (FSC)",
+      "subject": "Chinese Language",
+      "type": "stationery"
+    },
+    {
+      "title": "WGPS Five-in-one Fastener File - Yellow",
+      "subject": "Chinese Language",
+      "type": "stationery"
+    },
+    {
+      "title": "WGPS Broad Lines Exercise Book (FSC)",
+      "subject": "Malay Language",
+      "type": "stationery"
+    },
+    {
+      "title": "WGPS Five-in-one Fastener File - Yellow",
+      "subject": "Malay Language",
+      "type": "stationery"
+    },
+    {
+      "title": "WGPS Broad Lines Exercise Book (FSC)",
+      "subject": "Tamil Language",
+      "type": "stationery"
+    },
+    {
+      "title": "WGPS Five-in-one Fastener File - Yellow",
+      "subject": "Tamil Language",
+      "type": "stationery"
+    }
+  ]
+
+
+    },
+    
+        "primary3": {
+          "books": [
+            {
+              "title": "Primary 3 STELLAR 2.0 Readers: Units 5 to 9 Bundle",
+              "subject": "English Language",
+              "type": "book",
+              "comment": "WILL BE DISTRIBUTED BY TEACHER WHEN SCHOOL REOPENS"
+            },
+            {
+              "title": "MC English Listening Comprehension & Oral P3",
+              "subject": "English Language",
+              "type": "book",
+              "publisher": "Marshall C"
+            },
+            {
+              "title": "Primary Mathematics Textbook 3A",
+              "subject": "Mathematics",
+              "type": "book",
+              "publisher": "Star Pub"
+            },
+            {
+              "title": "Primary Mathematics Textbook 3B",
+              "subject": "Mathematics",
+              "type": "book",
+              "publisher": "Star Pub"
+            },
+            {
+              "title": "Primary Mathematics Practice Book 3A",
+              "subject": "Mathematics",
+              "type": "book",
+              "publisher": "Star Pub"
+            },
+            {
+              "title": "Primary Mathematics Practice Book 3B",
+              "subject": "Mathematics",
+              "type": "book",
+              "publisher": "Star Pub"
+            },
+            {
+              "title": "Inspiring Science Primary 3 Textbook",
+              "subject": "Science",
+              "type": "book",
+              "publisher": "Marshall C"
+            },
+            {
+              "title": "Inspiring Science Primary 3 Activity Book",
+              "subject": "Science",
+              "type": "book",
+              "publisher": "Marshall C"
+            },
+            {
+              "title": "Social Studies Primary 3 Activity Book",
+              "subject": "Social Studies",
+              "type": "book",
+              "publisher": "Marshall C"
+            },
+            {
+              "title": "My Physical Education Journal P3",
+              "subject": "Physical and Health Education",
+              "type": "book",
+              "publisher": "Marshall C"
+            },
+            {
+              "title": "iGROW - Striving to Shine",
+              "subject": "FTGP",
+              "type": "book",
+              "comment": "Complimentary by School"
+            },
+            {
+              "title": "Character and Citizenship Education (Form Teacher Guidance Period) P3",
+              "subject": "Character and Citizenship Education",
+              "type": "book",
+              "publisher": "Marshall C"
+            }
+          ],
+          "stationery": [
+            {
+              "title": "WGPS Report Book",
+              "subject": "General",
+              "type": "stationery",
+              "comment": "For new admission student only"
+            },
+            {
+              "title": "WPS Student Handbook (2025)",
+              "subject": "General",
+              "type": "stationery",
+              "comment": "Complimentary by School"
+            },
+            {
+              "title": "WGPS Jotter Book with Lines (FSC)",
+              "subject": "English Language",
+              "type": "stationery"
+            },
+            {
+              "title": "WGPS Five-in-one Fastener File - Red",
+              "subject": "English Language",
+              "type": "stationery"
+            },
+            {
+              "title": "WGPS Single Line Exercise Book (FSC)",
+              "subject": "Mathematics",
+              "type": "stationery"
+            },
+            {
+              "title": "WGPS Five-in-one Fastener File - Blue",
+              "subject": "Mathematics",
+              "type": "stationery"
+            },
+            {
+              "title": "WGPS A4 Exam Paper",
+              "subject": "Mathematics",
+              "type": "stationery"
+            },
+            {
+              "title": "WGPS Five-in-one Fastener File - Green",
+              "subject": "Science",
+              "type": "stationery"
+            },
+            {
+              "title": "WGPS Medium Square Exercise Book (FSC)",
+              "subject": "Chinese Language",
+              "type": "stationery"
+            },
+            {
+              "title": "WGPS Chinese Composition Pad",
+              "subject": "Chinese Language",
+              "type": "stationery"
+            },
+            {
+              "title": "WGPS Five-in-one Fastener File - Yellow",
+              "subject": "Chinese Language",
+              "type": "stationery"
+            },
+            {
+              "title": "WGPS Single Line Exercise Book (FSC)",
+              "subject": "Malay Language",
+              "type": "stationery"
+            },
+            {
+              "title": "WGPS Five-in-one Fastener File - Yellow",
+              "subject": "Malay Language",
+              "type": "stationery"
+            },
+            {
+              "title": "WGPS Single Line Exercise Book (FSC)",
+              "subject": "Tamil Language",
+              "type": "stationery"
+            },
+            {
+              "title": "WGPS Five-in-one Fastener File - Yellow",
+              "subject": "Tamil Language",
+              "type": "stationery"
+            },
+            {
+              "title": "A4 Sketch Book",
+              "subject": "Art",
+              "type": "stationery"
+            },
+            {
+              "title": "OMNI Intense Water Colour Pencil, 12 Colors (Long)",
+              "subject": "Art",
+              "type": "stationery"
+            },
+            {
+              "title": "ESPP Drawing Block 15 Inch x 11 Inch, 135gsm",
+              "subject": "Art",
+              "type": "stationery"
+            },
+            {
+              "title": "OMNI Small Oil Pastel, 25 Colors (Round Stick)",
+              "subject": "Art",
+              "type": "stationery"
+            },
+            {
+              "title": "A3 Plastic Two Button Folder",
+              "subject": "Art",
+              "type": "stationery"
+            }
+          ]
+        
+      
     },
     "primary4": {
         "books": [
